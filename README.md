@@ -5,7 +5,7 @@ The [FIRE (financial independence, retire early) dashboard](www.firedashboard.ap
 
 This is  a FREE platform that is built and managed entirely by volunteers. As always, there are ongoing costs to run this site such as servers, domains, email, and more. Please consider becoming a [patron](https://www.patreon.com/firedashboard) so we can continue our mission of being accessible and free ❤️
 
-![FIRE Dashboard image](https://github.com/matthewsmorrison/fire-dashboard/src/assets/images/fire.png)
+![FIRE Dashboard image](https://github.com/matthewsmorrison/fire-dashboard/blob/main/src/assets/images/fire.png)
 
 ## Getting Started
 
