@@ -121,7 +121,7 @@ const FinancialBox: React.FC<FinancialBoxProps> = ({
                 step={0.1}
                 min={0}
                 marks
-                max={10}
+                max={20}
                 onChange={(event: React.ChangeEvent<any>, newValue: any) => onGrowthChange(newValue / 100)}
               />
             </Grid>
@@ -142,7 +142,7 @@ const FinancialBox: React.FC<FinancialBoxProps> = ({
                 inputProps={{
                   step: 0.1,
                   min: 0,
-                  max: 10,
+                  max: 100,
                   type: 'number'
                 }}
               />
