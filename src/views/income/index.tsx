@@ -40,6 +40,7 @@ const Income: React.FC = () => {
 
   useEffect(() => {
     removeScenarios()
+    // eslint-disable-next-line
   }, [])
 
   const [addIncome, setAddIncome] = useState<IncomeObject>(incomeDefault)

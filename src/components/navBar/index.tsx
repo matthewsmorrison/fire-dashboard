@@ -17,6 +17,7 @@ const Sidebar: React.FC = () => {
     const splitPath = window.location.pathname.split('/')
     selectTab(splitPath[splitPath.length - 1])
     if (uid) getDetails()
+    // eslint-disable-next-line
   }, [uid])
 
   const [signout, setSignout] = useState<boolean>(false)
