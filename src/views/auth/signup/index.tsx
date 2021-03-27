@@ -34,6 +34,7 @@ const SignUp: React.FC = () => {
     return () => {
       window.removeEventListener('keydown', enterHandler)
     }
+    // eslint-disable-next-line
   }, [state.email, state.password])
 
   return (

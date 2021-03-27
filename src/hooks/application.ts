@@ -395,6 +395,7 @@ export function useApplicationStore(): any {
 
       thisYearAnnotations.map((annotation: any) => {
         annotations.push(annotation)
+        return null
       })
     }
 
@@ -523,8 +524,9 @@ export function useApplicationStore(): any {
         annotations: thisYearAnnotations
       })
 
-      thisYearAnnotations.map((annotation: any, annotationNumber: number) => {
+      thisYearAnnotations.map((annotation: any) => {
         annotations.push(annotation)
+        return null
       })
     }
 

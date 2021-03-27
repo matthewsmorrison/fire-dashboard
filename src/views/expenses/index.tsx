@@ -40,6 +40,7 @@ const Expenses: React.FC = () => {
 
   useEffect(() => {
     removeScenarios()
+    // eslint-disable-next-line
   }, [])
 
   const [addExpense, setAddExpense] = useState<ExpenseObject>(defaultExpense)
