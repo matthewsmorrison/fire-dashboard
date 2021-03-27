@@ -7,7 +7,6 @@ import { CURRENCY_CODES } from 'helpers/const'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import Grid from '@material-ui/core/Grid'
-import Slider from '@material-ui/core/Slider'
 import Input from '@material-ui/core/Input'
 
 interface FinancialBoxProps {
@@ -115,16 +114,6 @@ const FinancialBox: React.FC<FinancialBoxProps> = ({
         {growthComment && <p style={{ marginTop: '30px', marginBottom: '30px' }}>{growthComment}</p>}
         {onGrowthChange && (
           <Grid container spacing={2} alignItems="center" style={{ marginBottom: '30px' }}>
-            <Grid item xs>
-              <Slider
-                value={data.growth ? data.growth * 100 : data.interestRate ? data.interestRate * 100 : 0}
-                step={0.1}
-                min={0}
-                marks
-                max={10}
-                onChange={(event: React.ChangeEvent<any>, newValue: any) => onGrowthChange(newValue / 100)}
-              />
-            </Grid>
             <Grid item>
               <Input
                 value={
@@ -137,12 +126,12 @@ const FinancialBox: React.FC<FinancialBoxProps> = ({
                 onChange={(event: React.ChangeEvent<any>) =>
                   onGrowthChange(event.target.value === '' ? '' : Number(event.target.value) / 100)
                 }
-                style={{ width: '70px', userSelect: 'none' }}
+                style={{ userSelect: 'none' }}
                 type="number"
                 inputProps={{
                   step: 0.1,
                   min: 0,
-                  max: 10,
+                  max: 100,
                   type: 'number'
                 }}
               />
@@ -157,28 +146,18 @@ const FinancialBox: React.FC<FinancialBoxProps> = ({
               Vanguard fund)
             </p>
             <Grid container spacing={2} alignItems="center" style={{ marginBottom: '30px' }}>
-              <Grid item xs>
-                <Slider
-                  value={data.fee ? data.fee * 100 : 0}
-                  step={0.01}
-                  min={0}
-                  marks
-                  max={3}
-                  onChange={(event: React.ChangeEvent<any>, newValue: any) => onFeeChange(newValue / 100)}
-                />
-              </Grid>
               <Grid item>
                 <Input
                   value={data.fee ? (data.fee * 100).toFixed(2) : 0}
                   onChange={(event: React.ChangeEvent<any>) =>
                     onFeeChange(event.target.value === '' ? '' : Number(event.target.value) / 100)
                   }
-                  style={{ width: '70px', userSelect: 'none' }}
+                  style={{ userSelect: 'none' }}
                   type="number"
                   inputProps={{
                     step: 0.01,
                     min: 0,
-                    max: 3,
+                    max: 100,
                     type: 'number'
                   }}
                 />
