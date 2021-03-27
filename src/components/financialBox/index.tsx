@@ -157,7 +157,7 @@ const FinancialBox: React.FC<FinancialBoxProps> = ({
                   inputProps={{
                     step: 0.01,
                     min: 0,
-                    max: 10,
+                    max: 100,
                     type: 'number'
                   }}
                 />
