@@ -23,10 +23,13 @@ import liability from 'assets/icons/liability.svg'
 import debt from 'assets/icons/debt.svg'
 import tick from 'assets/icons/tick.svg'
 import fail from 'assets/icons/fail.svg'
+import githubIcon from 'assets/icons/github.svg'
+import patreon from 'assets/icons/patreon.svg'
 import landing from 'assets/icons/landing.svg'
 import health from 'assets/images/health.png'
 import networth from 'assets/images/networth.png'
 import fire from 'assets/images/fire.png'
+import github from 'assets/images/github.png'
 
 export const icon = {
   pencil,
@@ -56,5 +59,8 @@ export const icon = {
   landing,
   health,
   networth,
-  fire
+  fire,
+  github,
+  githubIcon,
+  patreon
 }

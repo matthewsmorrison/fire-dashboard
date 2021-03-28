@@ -65,6 +65,18 @@ export const NavButton = styled.button`
   }
 `
 
+export const NavSecondaryButton = styled(NavButton)`
+  background-color: #777777;
+
+  &:hover {
+    background: #949292;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+`
+
 export const Billboard = styled.section`
   padding-top: 16rem;
   padding-bottom: 10rem;

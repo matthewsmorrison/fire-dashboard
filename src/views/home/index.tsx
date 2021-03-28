@@ -4,6 +4,7 @@ import {
   NavRow,
   Logo,
   NavButton,
+  NavSecondaryButton,
   Billboard,
   BillboardContent,
   BillboardMessage,
@@ -36,20 +37,32 @@ const Home: React.FC = () => {
               </a>
             </Logo>
 
+            <a
+              style={{ marginLeft: 'auto' }}
+              href="https://github.com/matthewsmorrison/fire-dashboard"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img style={{ height: '55px' }} src={icon.github} alt="github icon" />
+            </a>
+
+            <a
+              style={{ fontWeight: 600 }}
+              href="https://www.patreon.com/firedashboard"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <NavSecondaryButton>Support Open Source Project</NavSecondaryButton>
+            </a>
+
             {uid && (
-              <a style={{ marginLeft: 'auto', fontWeight: 600 }} href="/dashboard">
+              <a style={{ fontWeight: 600 }} href="/dashboard">
                 <NavButton>Go To Dashboard</NavButton>
               </a>
             )}
 
             {!uid && (
-              <a style={{ marginLeft: 'auto', fontWeight: 600 }} href="/signin">
-                Login
-              </a>
-            )}
-
-            {!uid && (
-              <a style={{ marginLeft: '15px' }} href="/signin">
+              <a href="/signin">
                 <NavButton>Get Started</NavButton>
               </a>
             )}
